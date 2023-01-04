@@ -1,0 +1,1 @@
+# TR-OCR-ONNX-Optimization
