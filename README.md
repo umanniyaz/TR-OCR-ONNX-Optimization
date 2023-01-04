@@ -27,9 +27,12 @@ session.run_with_iobinding(io_binding)`
 
 Try adjusting `inter_op_threads` and `intra_op_threads` for Sequential and Parallel Execution(CPU) and iobinding on CUDA (GPU), I believe you will see improvement in Inference with actual model accuracy preserved
 
-Refernces:
+References:
+
 https://github.com/microsoft/onnxruntime-openenclave/blob/openenclave-public/docs/ONNX_Runtime_Perf_Tuning.md
+
 https://github.com/microsoft/onnxruntime-openenclave/blob/openenclave-public/docs/ONNX_Runtime_Graph_Optimizations.md
+
 https://fs-eire.github.io/onnxruntime/docs/performance/tune-performance.html
 
 
