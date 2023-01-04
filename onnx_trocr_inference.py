@@ -26,7 +26,7 @@ model_name = "microsoft/trocr-base-printed"
 processor = TrOCRProcessor.from_pretrained(model_name)
 model = VisionEncoderDecoderModel.from_pretrained(model_name)
 
-url = r"<path>"
+url = r"<path>" #Image Path
 image = Image.open(requests.get(url, stream=True).raw).convert("RGB")
 image = Image.open(url).convert("RGB")
 pixel_values = processor([image], return_tensors="pt").pixel_values
@@ -156,7 +156,7 @@ class ORTModelForVision2Seq(VisionEncoderDecoderModel, GenerationMixin):
         return self
 
 
-def test_ort():
+def test_ort_session():
     model = ORTModelForVision2Seq()
     model = model.to(device)
 
@@ -189,7 +189,7 @@ def test_original():
 
 
 test_original()
-test_ort()
+test_ort_session()
 
 
 
