@@ -2,7 +2,7 @@
 
 For Tr-OCR model conversion to ONNX will give two file encoder_onnx and decoder_onnx,use low value for tolerance `--atol` 1e-3:
 
-python -m transformers.onnx --model=microsoft/trocr-base-printed  --feature=vision2seq-lm models_trocr_base --atol 1e-3
+`python -m transformers.onnx --model=microsoft/trocr-base-printed  --feature=vision2seq-lm models_trocr_base --atol 1e-3`
 
 
 FOR CPU as Execution provider,we have sequential vs parallel execution
